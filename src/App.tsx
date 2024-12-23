@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Stores from "./pages/Stores";
 import Categories from "./pages/Categories";
+import CustomerSignup from "./pages/CustomerSignup";
+import RetailerSignup from "./pages/RetailerSignup";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +23,8 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/stores" element={<Stores />} />
           <Route path="/categories" element={<Categories />} />
+          <Route path="/signup/customer" element={<CustomerSignup />} />
+          <Route path="/signup/retailer" element={<RetailerSignup />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

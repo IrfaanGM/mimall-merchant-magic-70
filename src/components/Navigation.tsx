@@ -1,4 +1,4 @@
-import { ShoppingCart, MessageSquare } from "lucide-react";
+import { ShoppingCart, MessageSquare, Store, UserPlus } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Navigation = () => {
@@ -28,6 +28,20 @@ export const Navigation = () => {
           </div>
 
           <div className="flex items-center space-x-4">
+            <div className="flex space-x-2">
+              <Button variant="outline" size="sm" asChild>
+                <a href="/signup/customer">
+                  <UserPlus className="h-4 w-4 mr-1" />
+                  Join
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <a href="/signup/retailer">
+                  <Store className="h-4 w-4 mr-1" />
+                  Sell
+                </a>
+              </Button>
+            </div>
             <Button variant="ghost" size="icon" className="relative">
               <ShoppingCart className="h-5 w-5" />
               <span className="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
