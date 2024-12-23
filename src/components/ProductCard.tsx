@@ -9,6 +9,15 @@ interface ProductCardProps {
 }
 
 export const ProductCard = ({ image, name, price, category }: ProductCardProps) => {
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('en-ZA', {
+      style: 'currency',
+      currency: 'ZAR',
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(price);
+  };
+
   return (
     <div className="group relative bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
       <div className="aspect-square overflow-hidden">
@@ -22,7 +31,7 @@ export const ProductCard = ({ image, name, price, category }: ProductCardProps) 
         <p className="text-sm text-gray-500 mb-1">{category}</p>
         <h3 className="font-semibold text-lg mb-2 line-clamp-1">{name}</h3>
         <div className="flex items-center justify-between">
-          <p className="font-bold text-xl">${price.toFixed(2)}</p>
+          <p className="font-bold text-xl">{formatPrice(price)}</p>
           <Button size="icon" className="bg-primary hover:bg-primary/90">
             <ShoppingCart className="h-4 w-4" />
           </Button>

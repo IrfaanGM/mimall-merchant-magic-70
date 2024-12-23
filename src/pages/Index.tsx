@@ -2,33 +2,34 @@ import { Navigation } from "@/components/Navigation";
 import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
+import { SuggestionTicker } from "@/components/SuggestionTicker";
 
 const FEATURED_PRODUCTS = [
   {
     id: 1,
     name: "Premium Wireless Headphones",
-    price: 299.99,
+    price: 4999.99,
     category: "Electronics",
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80",
   },
   {
     id: 2,
     name: "Smart Watch Series X",
-    price: 399.99,
+    price: 6999.99,
     category: "Electronics",
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80",
   },
   {
     id: 3,
     name: "Professional Camera Kit",
-    price: 1299.99,
+    price: 19999.99,
     category: "Photography",
     image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&q=80",
   },
   {
     id: 4,
     name: "Designer Sunglasses",
-    price: 199.99,
+    price: 2999.99,
     category: "Fashion",
     image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&q=80",
   },
@@ -55,6 +56,8 @@ const Index = () => {
         </div>
       </section>
 
+      <SuggestionTicker />
+
       {/* Featured Products */}
       <section className="py-12 px-4">
         <div className="container mx-auto">
@@ -78,12 +81,12 @@ const Index = () => {
                 description: "Get instant help and personalized recommendations anytime.",
               },
               {
-                title: "Seamless Checkout",
-                description: "Quick and secure payment process for a smooth shopping experience.",
+                title: "Smart Product Matching",
+                description: "Our AI understands your needs and finds the perfect products.",
               },
               {
-                title: "Curated Selection",
-                description: "Handpicked products from premium brands and trusted sellers.",
+                title: "Local Support",
+                description: "Shop from trusted South African retailers with local pricing and support.",
               },
             ].map((feature) => (
               <div key={feature.title} className="text-center p-6 rounded-lg bg-gray-50">
