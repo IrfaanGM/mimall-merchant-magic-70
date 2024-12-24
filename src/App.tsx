@@ -9,6 +9,7 @@ import Stores from "./pages/Stores";
 import Categories from "./pages/Categories";
 import CustomerSignup from "./pages/CustomerSignup";
 import RetailerSignup from "./pages/RetailerSignup";
+import HailoRide from "./pages/HailoRide";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/categories" element={<Categories />} />
           <Route path="/signup/customer" element={<CustomerSignup />} />
           <Route path="/signup/retailer" element={<RetailerSignup />} />
+          <Route path="/hailo-ride" element={<HailoRide />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

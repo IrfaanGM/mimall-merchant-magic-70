@@ -1,4 +1,4 @@
-import { ShoppingCart, MessageSquare, Store, UserPlus } from "lucide-react";
+import { ShoppingCart, MessageSquare, Store, UserPlus, Car } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Navigation = () => {
@@ -21,6 +21,10 @@ export const Navigation = () => {
             </a>
             <a href="/stores" className="text-gray-600 hover:text-black transition-colors">
               Stores
+            </a>
+            <a href="/hailo-ride" className="text-gray-600 hover:text-black transition-colors">
+              <Car className="h-4 w-4 inline-block mr-1" />
+              HailoRide
             </a>
             <a href="/about" className="text-gray-600 hover:text-black transition-colors">
               About
