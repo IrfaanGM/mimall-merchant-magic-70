@@ -10,7 +10,7 @@ const Map = () => {
     if (!mapContainer.current) return;
 
     // Initialize map centered on Johannesburg
-    mapboxgl.accessToken = 'YOUR_MAPBOX_TOKEN'; // Replace with your Mapbox token
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA';
     
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
